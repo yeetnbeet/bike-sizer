@@ -3,6 +3,9 @@ import React, { useState } from 'react'
 const SizeForm = () => {
 
   const [name, setName] = useState('')
+  const [height, setHeight] = useState('')
+  const [inseam, setInseam] = useState('')
+
 
 
   const handleForm = () => {
@@ -12,13 +15,25 @@ const SizeForm = () => {
   const nameFieldHandler = (e) => {
     e.preventDefault()
     setName(e.target.value)
-    console.log(name)
+  }
+
+  const heightFieldHandler = (e) => {
+    e.preventDefault()
+    setHeight(e.target.value)
+  }
+
+  const inseamFieldHanlder = (e) => {
+    e.preventDefault()
+    setInseam(e.target.value)
   }
 
 
   return (
-    <form onSubmit={handleForm}>
-      <input type="text" placeholder="Name" value={name} onChange={nameFieldHandler}></input>
+    <form onSubmit={handleForm} className="flex flex-col">
+      <input type="text" placeholder="Name" value={name} onChange={nameFieldHandler} className="border-2 rounded-md my-1" />
+      <input type="text" placeholder="Height" value={height} onChange={heightFieldHandler} className="border-2 rounded-md my-1" />
+      <input type="text" placeholder="Inseam" value={inseam} onChange={inseamFieldHanlder} className="border-2 rounded-md my-1" />
+      <input type="submit" />
     </form>
   )
 }
