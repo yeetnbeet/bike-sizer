@@ -1,9 +1,11 @@
 import React from 'react'
 
+import Intro from './components/Intro'
+
 function App() {
   return (
     <div>
-      <h1>Hello World</h1>
+      <Intro />
     </div>
   );
 }
