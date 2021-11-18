@@ -2,13 +2,23 @@ import React, { useState } from 'react'
 
 const SizeForm = () => {
 
+
+
   const [name, setName] = useState('')
   const [height, setHeight] = useState('')
   const [inseam, setInseam] = useState('')
 
+  const user = {
+    name: name,
+    height: height,
+    inseam: inseam
+  }
 
 
-  const handleForm = () => {
+
+  const handleForm = (e) => {
+    e.preventDefault()
+    alert(`${user.name} submitted`)
     console.log('form submitted')
   }
 
