@@ -2,6 +2,7 @@ import React from 'react'
 
 import Intro from './components/Intro'
 import SizeForm from './components/SizeForm';
+import Output from './components/Output'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     <div>
       <Intro />
       <SizeForm />
+      <Output />
     </div>
   );
 }

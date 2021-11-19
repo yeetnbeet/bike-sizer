@@ -18,7 +18,7 @@ const SizeForm = () => {
 
   const handleForm = (e) => {
     e.preventDefault()
-    alert(`${user.name} submitted`)
+    alert(`${user.name} ${user.height} ${user.inseam} submitted`)
     console.log('form submitted')
   }
 
