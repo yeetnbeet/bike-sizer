@@ -14,10 +14,10 @@ function App() {
   }
 
   return (
-    <div className="container mx-auto px-8">
-      <Intro />
-      <SizeForm onFormSubmit={displaySize} />
-      <Output outputData={user} />
+    <div className="container mx-auto px-8 flex flex-col sm:flex-row flex-wrap">
+      <Intro classes="sm:w-1/2"/>
+      <SizeForm onFormSubmit={displaySize} classes="sm:w-1/2" />
+      <Output outputData={user} classes="w-full" />
     </div>
   );
 }

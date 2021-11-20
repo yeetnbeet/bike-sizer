@@ -45,7 +45,7 @@ const SizeForm = (props) => {
 
 
   return (
-    <form onSubmit={handleForm} className="flex flex-col">
+    <form onSubmit={handleForm} className={`flex flex-col ${props.classes}`}>
       <input type="text" placeholder="Name" value={name} onChange={nameFieldHandler} className="border-2 rounded-md my-1" />
       <input type="text" placeholder="Height" value={height} onChange={heightFieldHandler} className="border-2 rounded-md my-1" />
       <input type="text" placeholder="Inseam" value={inseam} onChange={inseamFieldHanlder} className="border-2 rounded-md my-1" />

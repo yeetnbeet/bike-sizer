@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Intro = () => {
+const Intro = (props) => {
   return (
-    <div>
+    <div className={props.classes}>
       <h1>Tell us some basic measurements</h1>
       <p>To find the right size bike for you, we'll need some basic size info:</p>
       <ul>

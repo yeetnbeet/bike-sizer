@@ -5,7 +5,7 @@ const Output = (props) => {
   const user = props.outputData
 
   return (
-    <div>
+    <div className={`${props.classes}`}>
       <h1>Output</h1>
       <p>{user.name}</p>
       <p>{user.height}</p>
