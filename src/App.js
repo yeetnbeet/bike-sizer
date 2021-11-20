@@ -10,17 +10,11 @@ function App() {
 
   const displaySize = (user) => {
     console.log(`${user.inseam}`)
-
-   setUser(user)
-
-  
+    setUser(user)
   }
 
-  
-
-
   return (
-    <div>
+    <div className="container mx-auto px-8">
       <Intro />
       <SizeForm onFormSubmit={displaySize} />
       <Output outputData={user} />
