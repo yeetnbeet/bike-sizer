@@ -1,26 +1,12 @@
 import React, { useState } from 'react'
 
-const SizeForm = () => {
-
-
+const SizeForm = (props) => {
 
   const [name, setName] = useState('')
   const [height, setHeight] = useState('')
   const [inseam, setInseam] = useState('')
 
-  const user = {
-    name: name,
-    height: height,
-    inseam: inseam
-  }
 
-
-
-  const handleForm = (e) => {
-    e.preventDefault()
-    alert(`${user.name} ${user.height} ${user.inseam} submitted`)
-    console.log('form submitted')
-  }
 
   const nameFieldHandler = (e) => {
     e.preventDefault()
@@ -35,6 +21,26 @@ const SizeForm = () => {
   const inseamFieldHanlder = (e) => {
     e.preventDefault()
     setInseam(e.target.value)
+  }
+
+  const handleForm = (e) => {
+    e.preventDefault()
+    
+    console.log('form submitted')
+    const user = {
+      name: name,
+      height: height,
+      inseam: inseam
+    }
+    props.onFormSubmit(user)
+    alert(`${user.name} ${user.height} ${user.inseam} submitted`)
+
+    //reset form
+    setName('')
+    setHeight('')
+    setInseam('')
+
+    
   }
 
 

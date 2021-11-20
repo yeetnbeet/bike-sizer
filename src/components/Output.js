@@ -1,6 +1,8 @@
 import React from 'react'
 
-const Output = () => {
+const Output = (props) => {
+
+  
   return (
     <div>
       <h1>Output</h1>

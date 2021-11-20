@@ -6,14 +6,19 @@ import Output from './components/Output'
 
 function App() {
 
+  const displaySize = (user) => {
+    console.log(`${user.name}`)
 
+    const sizeOutput = user
+
+  }
 
 
   return (
     <div>
       <Intro />
-      <SizeForm />
-      <Output />
+      <SizeForm onFormSubmit={displaySize} />
+      <Output  outputData={sizeOutput} />
     </div>
   );
 }
