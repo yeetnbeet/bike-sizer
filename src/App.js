@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Intro from './components/Intro'
 import SizeForm from './components/SizeForm';
@@ -6,19 +6,24 @@ import Output from './components/Output'
 
 function App() {
 
+  const [user, setUser] = useState('')
+
   const displaySize = (user) => {
-    console.log(`${user.name}`)
+    console.log(`${user.inseam}`)
 
-    const sizeOutput = user
+   setUser(user)
 
+  
   }
+
+  
 
 
   return (
     <div>
       <Intro />
       <SizeForm onFormSubmit={displaySize} />
-      <Output  outputData={sizeOutput} />
+      <Output outputData={user} />
     </div>
   );
 }
