@@ -8,6 +8,8 @@ const Output = (props) => {
     <div>
       <h1>Output</h1>
       <p>{user.name}</p>
+      <p>{user.height}</p>
+      <p>{user.inseam}</p>
     </div>
   )
 }
