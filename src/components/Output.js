@@ -6,10 +6,10 @@ const Output = (props) => {
 
   return (
     <div className={`${props.classes} bg-gray-100 rounded-lg h-96`}>
-      <h1>Your Bike Measurements</h1>
-      <p><strong>Name:</strong> {user.name}</p>
-      <p>Height: {user.height}</p>
-      <p>Inseam: {user.inseam}</p>
+      <h1 >Your Bike Measurements</h1>
+      <p className="text-lg"><strong>Name:</strong> {user.name}</p>
+      <p className="text-lg"><strong>Height:</strong> {user.height}</p>
+      <p className="text-lg"><strong>Inseam:</strong> {user.inseam}</p>
     </div>
   )
 }
