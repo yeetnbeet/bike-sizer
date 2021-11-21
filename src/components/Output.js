@@ -5,11 +5,11 @@ const Output = (props) => {
   const user = props.outputData
 
   return (
-    <div className={`${props.classes}`}>
-      <h1>Output</h1>
-      <p>{user.name}</p>
-      <p>{user.height}</p>
-      <p>{user.inseam}</p>
+    <div className={`${props.classes} bg-gray-100 rounded-lg h-96`}>
+      <h1>Your Bike Measurements</h1>
+      <p><strong>Name:</strong> {user.name}</p>
+      <p>Height: {user.height}</p>
+      <p>Inseam: {user.inseam}</p>
     </div>
   )
 }
