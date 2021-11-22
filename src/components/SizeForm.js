@@ -4,7 +4,8 @@ const SizeForm = (props) => {
 
   const [name, setName] = useState('')
   const [height, setHeight] = useState('')
-  const [inseam, setInseam] = useState('')
+  const [inseam, setInseam] = useState()
+  
 
   const nameFieldHandler = (e) => {
     e.preventDefault()
@@ -32,7 +33,7 @@ const SizeForm = (props) => {
     }
     props.onFormSubmit(user)
     // alert(`${user.name} ${user.height} ${user.inseam} submitted`)
-
+    
     //reset form
     setName('')
     setHeight('')
