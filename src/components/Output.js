@@ -9,6 +9,7 @@ const Output = (props) => {
   const stemHeightRange = [Math.floor(.2*user.inseam - 11), Math.floor(.2*user.inseam - 13)]
   const stackHeightRange = [Math.floor(saddleStack-stemHeightRange[0]),Math.floor(saddleStack-stemHeightRange[1])]
 
+  
   return (
     <div className={`${props.classes} bg-gray-100 rounded-lg h-96`}>
       <h1 >Your Bike Measurements</h1>

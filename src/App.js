@@ -11,6 +11,7 @@ function App() {
 
   const displaySize = (user) => {
     console.log(`${user.inseam}`)
+    console.log(`${user.torsoLength}`)
     setUser(user)
   }
 

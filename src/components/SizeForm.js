@@ -4,7 +4,8 @@ const SizeForm = (props) => {
 
   const [name, setName] = useState('')
   const [height, setHeight] = useState('')
-  const [inseam, setInseam] = useState()
+  const [inseam, setInseam] = useState('')
+  const [torsoLength, setTorsoLength] = useState('')
   
 
   const nameFieldHandler = (e) => {
@@ -22,6 +23,10 @@ const SizeForm = (props) => {
     setInseam(e.target.value)
   }
 
+  const torsoLengthFieldHandler = (e) => {
+    e.preventDefault()
+    setTorsoLength(e.target.value)
+  }
   const handleForm = (e) => {
     e.preventDefault()
     
@@ -29,7 +34,8 @@ const SizeForm = (props) => {
     const user = {
       name: name,
       height: height,
-      inseam: inseam
+      inseam: inseam,
+      torsoLength: torsoLength
     }
     props.onFormSubmit(user)
     // alert(`${user.name} ${user.height} ${user.inseam} submitted`)
@@ -38,6 +44,7 @@ const SizeForm = (props) => {
     setName('')
     setHeight('')
     setInseam('')
+    setTorsoLength('')
 
     
   }
@@ -48,6 +55,7 @@ const SizeForm = (props) => {
       <input type="text" placeholder="Name" value={name} onChange={nameFieldHandler} className="border-2 rounded-md my-2 p-2" />
       <input type="text" placeholder="Height" value={height} onChange={heightFieldHandler} className="border-2 rounded-md my-2 p-2" />
       <input type="text" placeholder="Inseam" value={inseam} onChange={inseamFieldHanlder} className="border-2 rounded-md my-2 p-2" />
+      <input type="text" placeholder="Torso Length" value={torsoLength} onChange={torsoLengthFieldHandler} className="border-2 rounded-md my-2 p-2" />
       <input type="submit" className="bg-blue-500 text-white p-2 my-2 rounded-md hover:bg-blue-300 hover:text-blue-800" />
     </form>
   )
