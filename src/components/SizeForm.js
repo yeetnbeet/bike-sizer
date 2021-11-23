@@ -6,6 +6,7 @@ const SizeForm = (props) => {
   const [height, setHeight] = useState('')
   const [inseam, setInseam] = useState('')
   const [torsoLength, setTorsoLength] = useState('')
+  const [wingSpan, setWingSpan] = useState('')
   
 
   const nameFieldHandler = (e) => {
@@ -27,6 +28,12 @@ const SizeForm = (props) => {
     e.preventDefault()
     setTorsoLength(e.target.value)
   }
+
+  const wingSpanFieldHandler = (e) => {
+    e.preventDefault()
+    setWingSpan(e.target.value)
+  }
+
   const handleForm = (e) => {
     e.preventDefault()
     
@@ -45,6 +52,7 @@ const SizeForm = (props) => {
     setHeight('')
     setInseam('')
     setTorsoLength('')
+    setWingSpan('')
 
     
   }
@@ -56,6 +64,7 @@ const SizeForm = (props) => {
       <input type="text" placeholder="Height" value={height} onChange={heightFieldHandler} className="border-2 rounded-md my-2 p-2" />
       <input type="text" placeholder="Inseam" value={inseam} onChange={inseamFieldHanlder} className="border-2 rounded-md my-2 p-2" />
       <input type="text" placeholder="Torso Length" value={torsoLength} onChange={torsoLengthFieldHandler} className="border-2 rounded-md my-2 p-2" />
+      <input type="text" placeholder="Wing Span" value={wingSpan} onChange={wingSpanFieldHandler} className="border-2 rounded-md my-2 p-2"/>
       <input type="submit" className="bg-blue-500 text-white p-2 my-2 rounded-md hover:bg-blue-300 hover:text-blue-800" />
     </form>
   )
