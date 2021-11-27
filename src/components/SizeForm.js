@@ -54,6 +54,9 @@ const SizeForm = (props) => {
     setTorsoLength('')
     setWingSpan('')
 
+    //this is one location where I might be able to pass up rider fit data might be better here
+    //just need to add a second btn that acts as a reset and use form submit as the calculator
+
     
   }
 
