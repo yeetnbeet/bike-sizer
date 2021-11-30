@@ -2,7 +2,7 @@ import React from 'react'
 
 const Output = (props) => {
 
-  //there is a conversion issue for fixing later -ss
+  //this is outdated and wil soon be eliminated (handled in the form now)
   const user = props.outputData
   const saddleHeight = user.inseam * .81
   const saddleStack = saddleHeight*Math.cos(.296706)

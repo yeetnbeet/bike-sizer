@@ -7,6 +7,7 @@ const SizeForm = (props) => {
   const [inseam, setInseam] = useState('')
   const [torsoLength, setTorsoLength] = useState('')
   const [wingSpan, setWingSpan] = useState('')
+  const [riderFit, setRiderFit2] = useState('')
   
 
   const nameFieldHandler = (e) => {
@@ -38,12 +39,45 @@ const SizeForm = (props) => {
     e.preventDefault()
     
     console.log('form submitted')
+    
     const user = {
       name: name,
       height: height,
       inseam: inseam,
-      torsoLength: torsoLength
+      torsoLength: torsoLength,
+      metricsFlag: false,
+      riderFit: '',
+      
+      setRiderFit: function(){
+        
+        const saddleHeight = this.inseam *.833 ; //add math
+        const saddleStack = saddleHeight*Math.cos(.296706)
+        const stemHeightRange = [Math.floor(.2*this.inseam - 11), Math.floor(.2*this.inseam - 13)]
+
+        const stackHeight = [Math.floor(saddleStack-stemHeightRange[0]),Math.floor(saddleStack-stemHeightRange[1])] ;
+        
+        const reach = 1 ;        
+        
+        if(false){
+          saddleHeight = saddleHeight*2.6 //todo this whole thing is for input in inches
+          stackHeight = stackHeight*2.6 //todo
+          reach = reach*2.6        //todo
+        }
+        
+        const rideFit={
+          saddleHeight: saddleHeight,
+          stackHeight: stackHeight,
+          reach: reach
+        }
+        
+        this.riderFit = rideFit ;
+      }
+
     }
+
+    user.setRiderFit();
+
+
     props.onFormSubmit(user)
     // alert(`${user.name} ${user.height} ${user.inseam} submitted`)
     
@@ -53,10 +87,11 @@ const SizeForm = (props) => {
     setInseam('')
     setTorsoLength('')
     setWingSpan('')
+    setRiderFit2('')
 
     //this is one location where I might be able to pass up rider fit data might be better here
     //just need to add a second btn that acts as a reset and use form submit as the calculator
-
+    
     
   }
 
