@@ -56,7 +56,7 @@ const SizeForm = (props) => {
 
         const stackHeight = [Math.floor(saddleStack-stemHeightRange[0]),Math.floor(saddleStack-stemHeightRange[1])] ;
         
-        const reach = 1 ;        
+        const reach = 1 ; //R=(2inseam-torso+29)/3        
         
         if(false){
           saddleHeight = saddleHeight*2.6 //todo this whole thing is for input in inches
