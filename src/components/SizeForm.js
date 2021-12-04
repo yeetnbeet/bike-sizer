@@ -46,17 +46,21 @@ const SizeForm = (props) => {
       inseam: inseam,
       torsoLength: torsoLength,
       metricsFlag: false,
-      riderFit: '',
+      riderFit: {saddleHeight:'',
+        saddleStack:'',
+        stackHeight:['',''],
+        reach:''
+      },
       
       setRiderFit: function(){
         
-        const saddleHeight = this.inseam *.833 ; //add math
+        const saddleHeight = this.inseam *.833 ; 
         const saddleStack = saddleHeight*Math.cos(.296706)
         const stemHeightRange = [Math.floor(.2*this.inseam - 11), Math.floor(.2*this.inseam - 13)]
 
         const stackHeight = [Math.floor(saddleStack-stemHeightRange[0]),Math.floor(saddleStack-stemHeightRange[1])] ;
         
-        const reach = 1 ; //R=(2inseam-torso+29)/3        
+        const reach = (2*this.inseam-this.torsoLength+29)/3 ; //R=(2inseam-torso+29)/3        
         
         if(false){
           saddleHeight = saddleHeight*2.6 //todo this whole thing is for input in inches
@@ -64,13 +68,11 @@ const SizeForm = (props) => {
           reach = reach*2.6        //todo
         }
         
-        const rideFit={
-          saddleHeight: saddleHeight,
-          stackHeight: stackHeight,
-          reach: reach
-        }
-        
-        this.riderFit = rideFit ;
+        this.riderFit.saddleHeight = saddleHeight ;
+        this.riderFit.saddleStack = saddleStack ;
+        if(stackHeight[0] != 11){
+        this.riderFit.stackHeight = stackHeight ;} //this is hacky, better solution must be found
+        this.riderFit.reach = reach ;
       }
 
     }
@@ -88,9 +90,6 @@ const SizeForm = (props) => {
     setTorsoLength('')
     setWingSpan('')
     setRiderFit2('')
-
-    //this is one location where I might be able to pass up rider fit data might be better here
-    //just need to add a second btn that acts as a reset and use form submit as the calculator
     
     
   }
@@ -102,7 +101,6 @@ const SizeForm = (props) => {
       <input type="text" placeholder="Height" value={height} onChange={heightFieldHandler} className="border-2 rounded-md my-2 p-2" />
       <input type="text" placeholder="Inseam" value={inseam} onChange={inseamFieldHanlder} className="border-2 rounded-md my-2 p-2" />
       <input type="text" placeholder="Torso Length" value={torsoLength} onChange={torsoLengthFieldHandler} className="border-2 rounded-md my-2 p-2" />
-      <input type="text" placeholder="Wing Span" value={wingSpan} onChange={wingSpanFieldHandler} className="border-2 rounded-md my-2 p-2"/>
       <input type="submit" className="bg-blue-500 text-white p-2 my-2 rounded-md hover:bg-blue-300 hover:text-blue-800" />
     </form>
   )
