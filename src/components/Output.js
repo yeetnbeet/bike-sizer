@@ -3,7 +3,8 @@ import React from 'react'
 const Output = (props) => {
   
   const user = props.outputData
-  
+
+  if(user.height>=0 && user.inseam>=0 && user.torsoLength>=0){
   return (
     <div className={`${props.classes} bg-gray-100 rounded-lg h-96`}>
       <h1 >Your Bike Measurements</h1>
@@ -15,7 +16,14 @@ const Output = (props) => {
       <p className="text-lg"><strong>Stack Height:</strong> {user.riderFit.stackHeight[0]} to {user.riderFit.stackHeight[1]}</p>
       <p className="text-lg"><strong>Reach:</strong>{user.riderFit.reach}</p>
     </div>
-  )
+  )}
+  else{
+    return(
+      <div>
+
+      </div>
+    )
+  }
 }
 
 export default Output
