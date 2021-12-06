@@ -1,3 +1,4 @@
+//import { set } from 'core-js/core/dict'
 import React, { useState } from 'react'
 
 const SizeForm = (props) => {
@@ -6,6 +7,7 @@ const SizeForm = (props) => {
   const [height, setHeight] = useState('')
   const [inseam, setInseam] = useState('')
   const [torsoLength, setTorsoLength] = useState('')
+  const [email,setEmail] = useState('')
   const [wingSpan, setWingSpan] = useState('')
   const [riderFit, setRiderFit2] = useState('')
   
@@ -35,6 +37,11 @@ const SizeForm = (props) => {
     setWingSpan(e.target.value)
   }
 
+  const emailFieldHandler = (e) => {
+    e.preventDefault();
+    setEmail(e.target.value);
+  }
+
   const handleForm = (e) => {
     e.preventDefault()
     
@@ -42,6 +49,7 @@ const SizeForm = (props) => {
     
     const user = {
       name: name,
+      email: email,
       height: height,
       inseam: inseam,
       torsoLength: torsoLength,
@@ -88,6 +96,7 @@ const SizeForm = (props) => {
     setHeight('')
     setInseam('')
     setTorsoLength('')
+    setEmail('')
     setWingSpan('')
     setRiderFit2('')
     
@@ -98,6 +107,7 @@ const SizeForm = (props) => {
   return (
     <form onSubmit={handleForm} className={`flex flex-col ${props.classes}`}>
       <input type="text" placeholder="Name" value={name} onChange={nameFieldHandler} className="border-2 rounded-md my-2 p-2" />
+      <input type="text" placeholder="Email" value={email} onChange={emailFieldHandler} className="border-2 rounded-md my-2 p-2" />
       <input type="text" placeholder="Height" value={height} onChange={heightFieldHandler} className="border-2 rounded-md my-2 p-2" />
       <input type="text" placeholder="Inseam" value={inseam} onChange={inseamFieldHanlder} className="border-2 rounded-md my-2 p-2" />
       <input type="text" placeholder="Torso Length" value={torsoLength} onChange={torsoLengthFieldHandler} className="border-2 rounded-md my-2 p-2" />
