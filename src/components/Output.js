@@ -20,7 +20,7 @@ const Output = (props) => {
   else{
     return(
       <div>
-
+        
       </div>
     )
   }
