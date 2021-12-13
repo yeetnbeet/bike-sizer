@@ -10,7 +10,9 @@ function App() {
   const [user, setUser] = useState('')
 
   const displaySize = (user) => {
-    console.log(`${user.inseam}`)
+    console.log(`inseam:${user.inseam}`)
+    console.log(`torsolength:${user.torsoLength}`)
+    console.log(`stack:${user.riderFit.stackHeight[0]}`)
     setUser(user)
   }
 
