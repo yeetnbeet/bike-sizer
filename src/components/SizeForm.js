@@ -68,7 +68,7 @@ const SizeForm = (props) => {
         
         this.riderFit.saddleHeight = saddleHeight ;
         this.riderFit.saddleStack = saddleStack ;
-        if(stackHeight[0] != 11){
+        if(stackHeight[0] !== 11){
         this.riderFit.stackHeight = stackHeight ;} //this is hacky, better solution must be found
         this.riderFit.reach = reach ;
       }
