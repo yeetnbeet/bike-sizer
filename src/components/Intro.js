@@ -10,7 +10,7 @@ const Intro = (props) => {
         <li>Your inseam, measure from the crotch seam to the floor with the legs staight</li>
         <li>Your torso length, while sitting on a stool with back against a wall, measure from the top of the shoulder to the top of the stool</li>
       </ul>
-      <p class="text-sm">It will also be helpful to get the saddle height and saddle to bar measurement from your current bike (if possible).</p>
+      <p className="text-sm">It will also be helpful to get the saddle height and saddle to bar measurement from your current bike (if possible).</p>
     </div>
   )
 }
