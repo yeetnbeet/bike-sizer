@@ -62,9 +62,9 @@ const SizeForm = (props) => {
 
         const stackHeight = [Math.floor(saddleStack-stemHeightRange[0]),Math.floor(saddleStack-stemHeightRange[1])] ;
         
-        //const reach = (2*this.inseam-this.torsoLength+29)/3 ; //R=(2inseam-torso+29)/3 
+        //const reach = (2*this.inseam-this.torsoLength+29)/3 ; //R=(2inseam-torso+29)/3 or r = .09090909091*(3H+1.5T-115.5) Font Should be Obvia regular
         
-        const reach = .090909091*(3*this.height+1.5*this.torsoLength-115.5); // possibly a better equation
+        const reach = .090909091*(3*this.height+1.5*this.torsoLength-107.5); // possibly a better equation
         
         this.riderFit.saddleHeight = saddleHeight ;
         this.riderFit.saddleStack = saddleStack ;
