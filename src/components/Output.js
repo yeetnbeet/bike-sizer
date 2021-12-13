@@ -4,8 +4,9 @@ const Output = (props) => {
 
   //these constants calculate rider fit params temporarily here until I add to props... or not -Sam Segal
   const user = props.outputData
-  const saddleHeight = user.inseam * .81
-  const saddleStack = saddleHeight*Math.cos(.296706)
+  const saddleHeight = user.inseam * .882
+  const saddleStack = saddleHeight*Math.cos(.305)
+  //(.296706)
   const stemHeightRange = [Math.floor(.2*user.inseam - 11), Math.floor(.2*user.inseam - 13)]
   const stackHeightRange = [Math.floor(saddleStack-stemHeightRange[0]),Math.floor(saddleStack-stemHeightRange[1])]
 
