@@ -3,9 +3,9 @@ import logo from '../images/contender-logo-white.png'
 
 const Header = (props) => {
   return (
-    <header className={`${props.classes} h-24 p-4 px-8 bg-red-600 rounded-md my-4 text-white shadow-lg flex justify-between items-center`}>
+    <header className={`${props.classes} h-36 sm:h-24 p-4 px-4 sm:px-8 bg-red-600 rounded-md my-4 text-white shadow-lg flex sm:flex-row flex-col justify-between items-center`}>
       <img src={logo} alt="Contender Bicycles Logo" className="h-full" /> 
-      <h1 className="text-md sm:text-2xl font-bold">Contender Bike Sizer</h1>
+      <h1 className="mt-4 sm:mt-0 text-md sm:text-2xl font-bold">Contender Bike Sizer</h1>
 
       
     </header>
