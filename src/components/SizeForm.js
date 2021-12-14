@@ -1,4 +1,5 @@
 //import { set } from 'core-js/core/dict'
+import axios from 'axios'
 import React, { useState } from 'react'
 
 const SizeForm = (props) => {
@@ -77,10 +78,19 @@ const SizeForm = (props) => {
 
     user.setRiderFit();
 
+    const savedInfo = {name: user.name, height: user.height, inseam: user.inseam, torsoLength: user.torsoLength, saddleHeight: user.riderFit.saddleHeight,
+      stackHeightMin: user.riderFit.stackHeight[0], stackHeightMax: user.riderFit.stackHeight[1], reachMin: user.riderFit.reach[0], reachMax: user.riderFit.reach[1]
+    }
 
     props.onFormSubmit(user)
     // alert(`${user.name} ${user.height} ${user.inseam} submitted`)
     
+    //api post request to save data in a google form
+    axios.post('https://sheet.best/api/sheets/2a864456-632b-4ced-a890-47e98d614cf9', savedInfo)
+    .then(response => {
+      console.log(response);
+    })
+
     //reset form
     setName('')
     setHeight('')
