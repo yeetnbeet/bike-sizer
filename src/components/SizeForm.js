@@ -57,7 +57,7 @@ const SizeForm = (props) => {
       
       setRiderFit: function(){
         
-        const saddleHeight = this.inseam *.833 ; 
+        const saddleHeight = this.inseam *.883 ; 
         const saddleStack = saddleHeight*Math.cos(.296706)
         const stemHeightRange = [Math.floor(.2*this.inseam - 11), Math.floor(.2*this.inseam - 13)]
 
@@ -65,7 +65,7 @@ const SizeForm = (props) => {
         
         //const reach = (2*this.inseam-this.torsoLength+29)/3 ; //R=(2inseam-torso+29)/3 or r = .09090909091*(3H+1.5T-115.5) Font Should be Obvia regular
         
-        const reach = .090909091*(3*this.height+1.5*this.torsoLength-107.5); // possibly a better equation
+        const reach = .090909091*(3*this.height+1.5*this.torsoLength-105.5); // possibly a better equation
         
         this.riderFit.saddleHeight = saddleHeight ;
         this.riderFit.saddleStack = saddleStack ;
