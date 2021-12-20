@@ -14,7 +14,7 @@ const Output = (props) => {
       <p className="text-lg"> <strong>Torso Length:</strong> {user.torsoLength} </p>
       <p className="text-lg"><strong>Saddle Height:</strong> {Math.round(user.riderFit.saddleHeight*10)/10}</p>
       <p className="text-lg"><strong>Stack Height:</strong> {user.riderFit.stackHeight[0]} to {user.riderFit.stackHeight[1]}</p>
-      <p className="text-lg"><strong>Reach:</strong> {Math.round(user.riderFit.reach*10)/10}</p>
+      <p className="text-lg"><strong>Reach:</strong> {Math.round(user.riderFit.reach[0]*10)/10} to {Math.round(user.riderFit.reach[1]*10)/10}</p>
     </div>
   )}
   else{
