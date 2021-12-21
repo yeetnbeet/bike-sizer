@@ -20,8 +20,8 @@ const Output = (props) => {
         <h1 className="text-xl">Your Suggested Bike Measurements</h1>
         <div className="flex justify-evenly space-x-2">
         <p className="text-base sm:text-lg block text-center"><span className="text-2xl md:text-4xl px-8 py-6 block">{Math.round(user.riderFit.saddleHeight*10)/10}</span><strong className="block">Saddle Height</strong> </p>
-        <p className="text-lg block text-center"><span className="text-2xl md:text-4xl px-8 py-6 block ">{user.riderFit.stackHeight[0]} to {user.riderFit.stackHeight[1]}</span><strong className="block">Stack Height</strong> </p>
-        <p className="text-lg block text-center"><span className="text-2xl md:text-4xl px-8 py-6 block ">{Math.round(user.riderFit.reach*10)/10}</span><strong className="block">Reach</strong></p>
+        <p className="text-base sm:text-lg block text-center"><span className="text-2xl md:text-4xl px-8 py-6 block ">{user.riderFit.stackHeight[0]} to {user.riderFit.stackHeight[1]}</span><strong className="block">Stack Height</strong> </p>
+        <p className="text-base sm:text-lg block text-center"><span className="text-2xl md:text-4xl px-8 py-6 block ">{Math.round(user.riderFit.reach*10)/10}</span><strong className="block">Reach</strong></p>
         </div>
       </div>
       
