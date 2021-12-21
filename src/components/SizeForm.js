@@ -1,4 +1,5 @@
 //import { set } from 'core-js/core/dict'
+import axios from 'axios'
 import React, { useState } from 'react'
 
 const SizeForm = (props) => {
@@ -56,7 +57,7 @@ const SizeForm = (props) => {
       
       setRiderFit: function(){
         
-        const saddleHeight = this.inseam *.833 ; 
+        const saddleHeight = this.inseam *.883 ; 
         const saddleStack = saddleHeight*Math.cos(.296706)
         const stemHeightRange = [Math.floor(.2*this.inseam - 11), Math.floor(.2*this.inseam - 13)]
 
@@ -64,23 +65,32 @@ const SizeForm = (props) => {
         
         //const reach = (2*this.inseam-this.torsoLength+29)/3 ; //R=(2inseam-torso+29)/3 or r = .09090909091*(3H+1.5T-115.5) Font Should be Obvia regular
         
-        const reach = .090909091*(3*this.height+1.5*this.torsoLength-107.5); // possibly a better equation
+        const reach = .090909091*(3*this.height+1.5*this.torsoLength-105.5); // possibly a better equation
         
         this.riderFit.saddleHeight = saddleHeight ;
         this.riderFit.saddleStack = saddleStack ;
         if(stackHeight[0] !== 11){
         this.riderFit.stackHeight = stackHeight ;} //this is hacky, better solution must be found
-        this.riderFit.reach = reach ;
+        this.riderFit.reach = [reach-1,reach+1] ;
       }
 
     }
 
     user.setRiderFit();
 
+    const savedInfo = {name: user.name, height: user.height, inseam: user.inseam, torsoLength: user.torsoLength, saddleHeight: user.riderFit.saddleHeight,
+      stackHeightMin: user.riderFit.stackHeight[0], stackHeightMax: user.riderFit.stackHeight[1], reachMin: user.riderFit.reach[0], reachMax: user.riderFit.reach[1]
+    }
 
     props.onFormSubmit(user)
     // alert(`${user.name} ${user.height} ${user.inseam} submitted`)
     
+    //api post request to save data in a google form
+    axios.post('https://sheet.best/api/sheets/2a864456-632b-4ced-a890-47e98d614cf9', savedInfo)
+    .then(response => {
+      console.log(response);
+    })
+
     //reset form
     setName('')
     setHeight('')
