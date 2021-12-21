@@ -98,8 +98,6 @@ const SizeForm = (props) => {
     setTorsoLength('')
     setEmail('')
     
-    
-    
   }
 
 
