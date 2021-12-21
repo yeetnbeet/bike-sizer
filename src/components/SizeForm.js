@@ -1,6 +1,22 @@
 //import { set } from 'core-js/core/dict'
-import axios from 'axios'
 import React, { useState } from 'react'
+
+const { GoogleSpreadsheet } = require('google-spreadsheet');
+//init the sheet
+const doc = new GoogleSpreadsheet('1-e1YndrEsvlwQ13tUJii35fTR5PillBqZRYIX7JMQek');
+//init the auth
+(async function() {
+  await doc.useServiceAccountAuth({
+    client_email:"bikesizer@steady-shard-335719.iam.gserviceaccount.com",
+    private_key:"-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDEzctOa89Q6xjl\niPPg8wOCtsNz21EG2Ub/7l6bJONHH30hB73+guO9m9w58NuE2zsANwGVTVBv6OCh\nwwYyMAkWUHWZl3TMqM1s4Z3XFHy2arOVrAZbsAeCbnD6a898y+8//7Fe2lSyjLmk\n53BHL/71OEQQf1uml/2PTcz5BP6X9HSpdEtL4W747WmaNnGie1hanXMROFVb+8QC\nGEar0icA5hu7uecZWAwig3/JZndcm9fuPD+jpHI6Dez5VYU50xIxac7LuEv2/xVS\nmoU7An4yv0kqb+rqDCkY5GstClP3Y0eAeyHfVcnGLNquVLj8UYw8YQBMFZKXkZD6\nB4pGE/ltAgMBAAECggEACJHk6bAkfHkTAffMlZNE0rMuYAQBC254ZYUAm0/oEmeg\nIB6WsEJh3sFZPdqrrHrhdFkbhAq0VyiJvkbgT7Irdcx2JS86YlPIHOwsM+VL/aON\ng2sqHGGrdLYQzGQtH67qZwaK4j8D/ixw7xSMR+/38b9hU2NAX0jyEoSdnuBlTReV\nS3raLJId9Llhyd41v4l2Qx1plhQw6wQBQQPm6mhlL5eLmoDX3xF3XDYxU1u8Zqaf\ncYd7386aPT+pULIUGTMDt/Vbw4NKP5BS2zSCEe5I4Y4DhhCo9Po/M2Q7A4TDNLS5\nXROTk0J1EE52x/b8jst2/1WFcBV9n8Bgzg2pCMDynwKBgQDu3ZAk19zDZpCw46P6\n9zxLlnslm9BjOCn4+H1zokFeHVR9cjvm+DsSPdhFWDWhfKfMMozbf/6d8x87jUeF\nRXWkxsFQMVi0UdsP8SvQgF9xDgJ3dJ0mdc1SmH0udn2Ln3pRnOMdhaflLHiYndaL\nWioy1m1ms2hLWLt93k6iEtRRNwKBgQDS69Pa6houieonT4R1ldVDGtjY0H2MwYag\ngEi05iJwxVza2QnFO1JAccDfnMQyGcAZS3EwrtNR5A7Fe9ZP6mXOoNFGYppHt5GD\nBfYqAeed8KTcd7d+1N5BcjTRLjwp2rgzP9wS3f1XdSHiIeqRhfwSHducFW53h38G\n4oJfyICsewKBgQDbw21C+HdcL5kfpdDQrXcD9EcIqvpmzt2O+tAw+y8477M0V01V\nizyN4+h+pFFzacTX0gpWSMRxfaVWnP0YWHeMSnDA3yXFgSoS2Mh+5BzrXwBV9yw+\nnlNxkmpZvRp0wx0+ySELoFSAPRIXF+C0BRid/TpaKuXhrJmTjFy8MKa2sQKBgQCb\nTGRapU/NwGIVu6it4zp5BEVxrmEiyENV3d6qw1/MZKTvxio5fGodZSQ8APM8aFVW\nyoN28uJJQ3/UzE+J2+5F64brKiKqd3C+Zh9P4sMlOVBJvCPxUM6spWhaNI67yn0h\nzv09LxIf2PCvzYUmzN5CgJV4IReLDsrqyNBxsfF8DQKBgQDmEEijp3VxnfKGoXTs\nqyqmPSGejvItT6fv1e9RB3ziPaKrXO2m/yVOydAozMTGdGwV55iv5qnsz3AAAGo5\ndD8KT7SrJ/HfieEQQiBWGW/Atz5vZzJGm7P9Vl0fxRExbnNAaV5dmKrgTrxQzxBW\n5/xEkecnxYBJSor2h0cJZsS+vQ==\n-----END PRIVATE KEY-----\n"
+  });
+}());
+
+//testing
+
+
+
+
 
 const SizeForm = (props) => {
 
@@ -78,19 +94,26 @@ const SizeForm = (props) => {
 
     user.setRiderFit();
 
-    const savedInfo = {name: user.name, height: user.height, inseam: user.inseam, torsoLength: user.torsoLength, saddleHeight: user.riderFit.saddleHeight,
-      stackHeightMin: user.riderFit.stackHeight[0], stackHeightMax: user.riderFit.stackHeight[1], reachMin: user.riderFit.reach[0], reachMax: user.riderFit.reach[1]
-    }
+    //const savedInfo = {name: user.name, height: user.height, inseam: user.inseam, torsoLength: user.torsoLength, saddleHeight: user.riderFit.saddleHeight,
+      //stackHeightMin: user.riderFit.stackHeight[0], stackHeightMax: user.riderFit.stackHeight[1], reachMin: user.riderFit.reach[0], reachMax: user.riderFit.reach[1]
+    //}
+
+    (async function() {
+      await doc.loadInfo(); // loads document properties and worksheets
+      const sheet = doc.sheetsByIndex[0];
+      const newRow = await sheet.addRow({col1:user.name,col2:user.saddleHeight},"insert") ;
+      console.log(doc.title);
+      
+    }());
+    
+    (async function() {
+     
+    }());
 
     props.onFormSubmit(user)
     // alert(`${user.name} ${user.height} ${user.inseam} submitted`)
     
-    //api post request to save data in a google form
-    axios.post('https://sheet.best/api/sheets/2a864456-632b-4ced-a890-47e98d614cf9', savedInfo)
-    .then(response => {
-      console.log(response);
-    })
-
+    
     //reset form
     setName('')
     setHeight('')
