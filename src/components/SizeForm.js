@@ -13,6 +13,8 @@ const doc = new GoogleSpreadsheet('1-e1YndrEsvlwQ13tUJii35fTR5PillBqZRYIX7JMQek'
 const client_email = process.env.REACT_APP_CLIENT_EMAIL
 const private_key = process.env.REACT_APP_PRIVATE_KEY
 
+console.log(typeof client_email)
+
 // AUTH if NODE_ENV production ie. NEtlify must have .env vars CLIENT_EMAIL PRIVATE KEY values are from gcloud service account creds
 if(process.env.NODE_ENV === "production"){
   (async function() {
