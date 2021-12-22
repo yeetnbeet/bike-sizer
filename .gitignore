@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 key.json
+/src/components/key.json
 
 # testing
 /coverage
