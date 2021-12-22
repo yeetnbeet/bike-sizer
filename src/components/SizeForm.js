@@ -4,6 +4,7 @@ import key from './key.json' //key.json must be in the components folder for thi
 require('dotenv').config();
 
 console.log(process.env.NODE_ENV)
+console.log(process.env)
 
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 // Initialize the sheet - doc ID is the long id in the sheets URL
