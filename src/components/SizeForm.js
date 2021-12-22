@@ -1,6 +1,6 @@
 //import { set } from 'core-js/core/dict'
 import React, { useState } from 'react'
-import key from './key.json'
+import key from './key.json' //key.json must be in the components folder for this to function properly
 require('dotenv').config();
 
 console.log(key.client_email)
@@ -98,10 +98,10 @@ const SizeForm = (props) => {
 
     (async function() {
       await doc.loadInfo(); // loads document properties and worksheets
-      console.log(doc.title);
-      const sheet = doc.sheetsByIndex[0];
-      console.log(sheet.title)
-      await sheet.addRow({ Name: 'Sam', SaddleHeight: 'yikes' });
+      console.log(doc.title); // logs doc title for testing purposes
+      const sheet = doc.sheetsByIndex[0]; // creates sheet var
+      console.log(sheet.title) // logs sheet name for testing
+      await sheet.addRow({ Name: user.name, SaddleHeight: user.riderFit.saddleHeight }); //modifies sheet with user input
     }());
 
     //const savedInfo = {name: user.name, height: user.height, inseam: user.inseam, torsoLength: user.torsoLength, saddleHeight: user.riderFit.saddleHeight,
