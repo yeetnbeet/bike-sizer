@@ -99,6 +99,9 @@ const SizeForm = (props) => {
     (async function() {
       await doc.loadInfo(); // loads document properties and worksheets
       console.log(doc.title);
+      const sheet = doc.sheetsByIndex[0];
+      console.log(sheet.title)
+      await sheet.addRow({ Name: 'Sam', SaddleHeight: 'yikes' });
     }());
 
     //const savedInfo = {name: user.name, height: user.height, inseam: user.inseam, torsoLength: user.torsoLength, saddleHeight: user.riderFit.saddleHeight,
