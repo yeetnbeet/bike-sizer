@@ -101,7 +101,7 @@ const SizeForm = (props) => {
       console.log(doc.title); // logs doc title for testing purposes
       const sheet = doc.sheetsByIndex[0]; // creates sheet var
       console.log(sheet.title) // logs sheet name for testing
-      await sheet.addRow({ Name: user.name, SaddleHeight: user.riderFit.saddleHeight }); //modifies sheet with user input
+      await sheet.addRow({ Name: user.name, SaddleHeight: user.riderFit.saddleHeight, ReachMin: user.riderFit.reach[0], ReachMax: user.riderFit.reach[1], StackHeight: user.riderFit.stackHeight[0]+1, Height: user.height, Torso: user.torsoLength, Email: user.email }); //modifies sheet with user input
     }());
 
     //const savedInfo = {name: user.name, height: user.height, inseam: user.inseam, torsoLength: user.torsoLength, saddleHeight: user.riderFit.saddleHeight,
