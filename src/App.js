@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Intro from './components/Intro'
 import SizeForm from './components/SizeForm';
 import Output from './components/Output'
+require('dotenv').config();
 
 function App() {
 

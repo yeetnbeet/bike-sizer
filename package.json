@@ -19,7 +19,9 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start:local": "NODE_ENV=local npm run start",
+    "start:dev": "NODE_ENV=dev npm run start"
   },
   "eslintConfig": {
     "extends": [
