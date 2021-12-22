@@ -4,7 +4,9 @@ import Header from './components/Header'
 import Intro from './components/Intro'
 import SizeForm from './components/SizeForm';
 import Output from './components/Output'
+
 import Footer from './components/Footer'
+
 
 function App() {
 
