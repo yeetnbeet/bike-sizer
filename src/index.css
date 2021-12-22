@@ -2,8 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-li{
+li {
     margin: 5px;
+}
+
+h1 {
+    font-family: 'Saira Condensed', sans-serif;
+    text-transform: uppercase;
+}
+
+p, li {
+    font-family: 'Open Sans', sans-serif;
 }
 
 
