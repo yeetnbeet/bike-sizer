@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 import key from './key.json' //key.json must be in the components folder for this to function properly
 require('dotenv').config();
 
-console.log(process.env.NODE_ENV)
-console.log(process.env)
+// console.log(process.env.NODE_ENV)
+// console.log(process.env)
 
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 // Initialize the sheet - doc ID is the long id in the sheets URL
@@ -13,7 +13,7 @@ const doc = new GoogleSpreadsheet('1-e1YndrEsvlwQ13tUJii35fTR5PillBqZRYIX7JMQek'
 const client_email = process.env.REACT_APP_CLIENT_EMAIL
 const private_key = process.env.REACT_APP_PRIVATE_KEY
 
-console.log(typeof client_email)
+console.log(`Client EMAIL TYPE: ${typeof client_email}`)
 
 // AUTH if NODE_ENV production ie. NEtlify must have .env vars CLIENT_EMAIL PRIVATE KEY values are from gcloud service account creds
 if(process.env.NODE_ENV === "production"){
