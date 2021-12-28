@@ -1,1 +1,12 @@
-{}
+{
+  "type": "service_account",
+  "project_id": "steady-shard-335719",
+  "private_key_id": "fa522c923e884d3bd56c774a8be35ac530894d30",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDNOwUJ7VEaBbSW\nfDodQEUbzL5pC39EGFJu+PteuJjvAiQzt2RlJ78UchLMHrsCtXiBx15f2zXw5NPQ\n43Zj6s5lPkxE1Bk8oYMhhk84/cRQmqy4JQaVsAftO8dDv9EB2i02qaqEFLhLq3/8\nfAVjReaU2m2ohZX1CtvjLIwVDZ0XJ8ZgDHpSZk2Sqf+5fYAZibShrpPPrEqVd7BO\nRGgUBzd+H3U37QZ9w6O/+w65CPQwN+FKirAjJ1+3rFyPePueSnCyb0r1Q8AW5rmk\nQ5uxrLyd2j0s0Y8fSOFylBPQSZ7TVgRRDfomgxAxK5Ow0I459Gc/ONh5nvOKSRgp\nDTHnLiDjAgMBAAECggEAICkliv6zfN50BDkHaloN+mNFW3S/xs4A7P77dUZ8QMgX\nIDuW8fseiHev1mjiaXRCpCO3+FGDzHIvd0aN4O6E1XzDuu153vR4diJz+7xYrUDv\n3BOBSqfBNj3t5gIDIMUt3KkN3ZDZqJIBhnFw7rOfhKgOEyCL9VB0UM9ETHBLs7ry\nDPq5Wk5AXXC2K6zkbj2OlI8zG/HIXE9ZOMlPjezQyn4I5efgJd/40tRFZd0XHmkC\n4BXcG19VYhsJU8SkB0yZhC6RlETOs60iYi4vz4G5gAfPjDBSVANVI3W61pi5ceoa\nilZs5KcaEbVdlsQasigfG9Y9qB/sNNmO4dwZN1Gt4QKBgQDsstCUIMXF1rLkCUTd\nzpamfPIMQXDmsu2TcyEq/vUEzNUy4+26KfG7yAxCqN7YgaEOSZMQSJTO3H3hxC0T\nJoocO6EMFLFDT4JkLqj74lJqE1rS55WXTwvQY9RSHIg2cEhal0Kgyj5SxSdJMkba\nWvfuvDoa0Iwugvyz5rK85gtX6QKBgQDd90wxcpi8fMYDAEKaI2pil9rMkyUyk7pI\nhlKkJkLv9JKDPUtfuhFAycpl6LfEv8kYRf8lx9dlMrbxrPxyKnZGyNz1XyRJN8RN\nGdvImR+RwwycrDxanZhrkpdRUsApDnZlEN13GKqsWgiYj/HPohgbr0gWsMLlNwO2\nFYKczWo+6wKBgQDI4alrTbULhn8kUUmFBYONoJS8Gf37jPdcIGWR2/eOL1jxa8ei\nK17hA5KEMFWQYdOSEJcjRrYkKbUcGiY3DopAE8tGOXmHqr76zy7TNuzC4dI/FBQ8\n6fUY0uCrH1Pq/7goSh9d3sat8Gy7DlRblMC+eDjH8R5Hixt0guJGtuYBoQKBgQDW\nBhXZt/2+ATGMwzt1FKEH4BSBHYDIe9krBRm6XYo9hT2gfgGnk+n+5pPaH8LSW3qz\nhQq4izENyxDLh1kDXB4fsp4bmlmKn9MP5NcfXUYrbj9C8nBfj4Xgc8CkEX5oGCHg\n4ZoptAcdmNKhCGrJIirMxv5jopzKF3nkoGkIeKjxcQKBgQC6U2UUsImJkMC0Lmgx\nluNBaEnhEsYcyn42k50mNl/xGQA+NQsEGHXmIeMMl+K9GddZB5M3WOEuZPTT6IkP\ngRY+NBMat44TBWWMmuF9YObfvG8MO7Ioq1B36Fyiz21LemKixpa5dHKzCD1j0olv\nN2A2L7FkE+FNKUpQ6hS9q90Q9A==\n-----END PRIVATE KEY-----\n",
+  "client_email": "active-bike-sizer@steady-shard-335719.iam.gserviceaccount.com",
+  "client_id": "103584363486903916105",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/active-bike-sizer%40steady-shard-335719.iam.gserviceaccount.com"
+}
