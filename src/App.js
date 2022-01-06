@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import Header from './components/Header'
 import Intro from './components/Intro'
+import Convert from './components/Convert';
 import SizeForm from './components/SizeForm';
 import Output from './components/Output'
 
@@ -24,6 +25,7 @@ function App() {
       <Header classes="w-full"/>
       <Intro classes="sm:w-1/2 p-4"/>
       <SizeForm onFormSubmit={displaySize} classes="sm:w-1/2 p-4" />
+      <Convert classes="sm:w-1/2 p-4"/>
       <Output outputData={user} classes="w-full p-4 mt-4" />
       <Footer />
     </div>
