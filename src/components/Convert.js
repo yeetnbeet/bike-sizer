@@ -28,8 +28,8 @@ class Convert extends React.Component {
         <div>
         <form onSubmit={this.handleSubmit}>
           <input type="text" placeholder="Inches To Centimeters" value={this.state.value} onChange={this.handleChange} className="border-2 rounded-md my-2 p-2" />
-          <input type="submit" value="Submit" />
-          <h3> Value in CM: {this.state.valueCM}</h3>
+          <input type="submit" value="Convert" placeholder="Convert" className="bg-blue-500 text-white p-2 my-2 rounded-md hover:bg-blue-300 hover:text-blue-800" />
+          <h3>  Value in CM: {this.state.valueCM}</h3>
         </form> 
         </div>
         
