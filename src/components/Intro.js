@@ -11,6 +11,7 @@ const Intro = (props) => {
         <li>Your torso length, while sitting on a stool with back against a wall, measure from the top of the shoulder to the top of the stool</li>
       </ul>
       <p className="text-sm">It will also be helpful to get the saddle height and saddle to bar measurement from your current bike (if possible).</p>
+      <div><br/>For information on how to properly measure your bike click <a href="https://www.youtube.com/watch?v=nQ-G5ZH46kI" target="_blank">here</a></div>
     </div>
   )
 }
