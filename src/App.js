@@ -9,7 +9,7 @@ import ReactGA from 'react-ga';
 
 import Footer from './components/Footer'
 
-ReactGA.initialize("G-423RVM0Q5P")
+ReactGA.initialize("G-X8N462QBDH")
 ReactGA.pageview(window.location.pathname + window.location.search);
 ReactGA.event({
   category: 'User',
