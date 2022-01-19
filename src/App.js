@@ -4,9 +4,17 @@ import Header from './components/Header'
 import Intro from './components/Intro'
 import Convert from './components/Convert';
 import SizeForm from './components/SizeForm';
-import Output from './components/Output'
+import Output from './components/Output';
+import ReactGA from 'react-ga';
 
 import Footer from './components/Footer'
+
+ReactGA.initialize("G-423RVM0Q5P")
+ReactGA.pageview(window.location.pathname + window.location.search);
+ReactGA.event({
+  category: 'User',
+  action: 'Loaded the page'
+});
 
 
 function App() {
