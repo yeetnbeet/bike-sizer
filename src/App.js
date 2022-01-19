@@ -8,9 +8,9 @@ import Output from './components/Output';
 import ReactGA from 'react-ga';
 
 import Footer from './components/Footer'
-
-ReactGA.initialize("G-X8N462QBDH")
-ReactGA.pageview(window.location.pathname + window.location.search);
+const TrackingID = "UA-217709062-1"
+ReactGA.initialize(TrackingID);
+ReactGA.pageview(window.location.pathname);
 ReactGA.event({
   category: 'User',
   action: 'Loaded the page'

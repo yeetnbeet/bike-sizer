@@ -54,6 +54,7 @@ const SizeForm = (props) => {
         console.log("stemh:"+ stemHeightRange[0]);
       }
     }
+    
     user.setRiderFit(); 
     props.onFormSubmit(user)    
     setName('')
