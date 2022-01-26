@@ -4,7 +4,7 @@ const Output = (props) => {
   
   const user = props.outputData
 
-  if(user.height>=0 && user.inseam>=0 && user.torsoLength>=0){
+  if(user.height>0 && user.inseam>0 && user.torsoLength>=0){
   return (
     <div className={`${props.classes} bg-gray-100 rounded-lg h-auto flex flex-col justify-around lg:flex-row sm:text-3xl items-center`}>
 
