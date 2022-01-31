@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import ReactGA from 'react-ga';
+const TrackingID = "UA-217709062-1"
+ReactGA.initialize(TrackingID);
 const SizeForm = (props) => {
   const [name, setName] = useState('')
   const [height, setHeight] = useState('')
@@ -54,7 +57,12 @@ const SizeForm = (props) => {
         console.log("stemh:"+ stemHeightRange[0]);
       }
     }
-    
+
+    ReactGA.event({
+      category: 'User',
+      action: 'submitted the form'
+    });
+
     user.setRiderFit(); 
     props.onFormSubmit(user)    
     setName('')
