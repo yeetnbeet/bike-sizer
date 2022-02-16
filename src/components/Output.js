@@ -3,7 +3,7 @@ import React from 'react'
 const Output = (props) => {
   
   const user = props.outputData
-  console.log(user.riderFit.reach)
+  
 
   if(user.height>0 && user.inseam>0 && user.torsoLength>=0){
   return (
