@@ -76,23 +76,18 @@ const SizeForm = (props) => {
         reach:''
       },
       
-      setRiderFit: function(){
-        
+      setRiderFit: function(){        
         const saddleHeight = this.inseam *.883 ; 
         const saddleStack = saddleHeight*Math.cos(.296706)
         const stemHeightRange = [Math.floor(.2*this.inseam - 11), Math.floor(.2*this.inseam - 13)]
-
-        const stackHeight = [Math.floor(saddleStack-stemHeightRange[0]),Math.floor(saddleStack-stemHeightRange[1])] ;
-        
-        //const reach = (2*this.inseam-this.torsoLength+29)/3 ; //R=(2inseam-torso+29)/3 or r = .09090909091*(3H+1.5T-115.5) Font Should be Obvia regular
-        
-        const reach = .090909091*(3*this.height+1.5*this.torsoLength-105.5); // possibly a better equation
-        
+        const stackHeight = [Math.floor(saddleStack-stemHeightRange[0]-(.15*saddleHeight)),Math.floor(saddleStack-stemHeightRange[1]-(.12*saddleHeight))];              
+        const reach = .090909091*(3*this.height+1.5*this.torsoLength-105.5);        
         this.riderFit.saddleHeight = saddleHeight ;
         this.riderFit.saddleStack = saddleStack ;
         if(stackHeight[0] !== 11){
-        this.riderFit.stackHeight = stackHeight ;} //this is hacky, better solution must be found
-        this.riderFit.reach = [reach-1,reach+1] ;
+        this.riderFit.stackHeight = stackHeight ;} 
+        this.riderFit.reach = [reach,reach+4] ;
+        console.log("stemh:"+ stemHeightRange[0]);
       }
 
     }
