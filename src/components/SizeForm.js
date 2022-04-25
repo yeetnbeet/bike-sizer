@@ -1,9 +1,11 @@
 //import { set } from 'core-js/core/dict'
 import React, { useState } from 'react'
 import X from './X.json' 
+import axios from 'axios'
 require('dotenv').config();
 
 console.log(process.env.NODE_ENV)
+const link = "http://localhost:5000"
 
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 // Initialize the sheet - doc ID is the long id in the sheets URL
@@ -103,6 +105,10 @@ const SizeForm = (props) => {
       console.log(sheet.title) // logs sheet name for testing
       await sheet.addRow({ Name: user.name, SaddleHeight: user.riderFit.saddleHeight, ReachMin: user.riderFit.reach[0], ReachMax: user.riderFit.reach[1], StackHeight: user.riderFit.stackHeight[0]+1, Height: user.height, Torso: user.torsoLength, Email: user.email }); //modifies sheet with user input
     }());
+
+    axios.post(link,{
+
+    });
 
     //const savedInfo = {name: user.name, height: user.height, inseam: user.inseam, torsoLength: user.torsoLength, saddleHeight: user.riderFit.saddleHeight,
       //stackHeightMin: user.riderFit.stackHeight[0], stackHeightMax: user.riderFit.stackHeight//[1], reachMin: user.riderFit.reach[0], reachMax: user.riderFit.reach[1]
