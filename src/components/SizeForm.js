@@ -106,9 +106,14 @@ const SizeForm = (props) => {
       await sheet.addRow({ Name: user.name, SaddleHeight: user.riderFit.saddleHeight, ReachMin: user.riderFit.reach[0], ReachMax: user.riderFit.reach[1], StackHeight: user.riderFit.stackHeight[0]+1, Height: user.height, Torso: user.torsoLength, Email: user.email }); //modifies sheet with user input
     }());
 
-    axios.post(link,{
-
-    });
+    axios.get('/user', {
+      params: {
+        
+      }
+    })
+    .then(function (response) {
+      console.log(response);
+    })
 
     //const savedInfo = {name: user.name, height: user.height, inseam: user.inseam, torsoLength: user.torsoLength, saddleHeight: user.riderFit.saddleHeight,
       //stackHeightMin: user.riderFit.stackHeight[0], stackHeightMax: user.riderFit.stackHeight//[1], reachMin: user.riderFit.reach[0], reachMax: user.riderFit.reach[1]
