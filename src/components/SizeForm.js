@@ -111,10 +111,10 @@ const SizeForm = (props) => {
       url: link,
       data: {
         Name: user.name,
-        SaddleHeight: user.riderFit.saddleHeight,
-        ReachMin: user.riderFit.reach[0],
-        ReachMax: user.riderFit.reach[1],
-        StackHeight: user.riderFit.stackHeight[0]+1,
+        SaddleHeight: Math.round(user.riderFit.saddleHeight*10)/10,
+        ReachMin: Math.round(user.riderFit.reach[0]*10)/10,
+        ReachMax: Math.round(user.riderFit.reach[1]*10)/10,
+        StackHeight: Math.round((user.riderFit.stackHeight[0]+1)*10)/10,
         Height: user.height,
         Torso: user.torsoLength,
         Email: user.email
