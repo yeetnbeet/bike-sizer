@@ -5,7 +5,7 @@ import axios from 'axios'
 require('dotenv').config();
 
 console.log(process.env.NODE_ENV)
-const link = "http://localhost:5000/"
+const link = "http://34.171.84.131:5000/"
 
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 // Initialize the sheet - doc ID is the long id in the sheets URL
